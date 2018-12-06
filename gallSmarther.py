@@ -49,8 +49,11 @@ def callback():
 
 
 if __name__ == "__main__":
+    port=8080
     # This allows us to use a plain HTTP callback
     # os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = "1"
     # Run in DEBUG mode
-    # app.run(debug=True)
-    app.run()
+    print("Start listening on port " + str(port))
+    print("http://192.168.1.91:" + str(port))
+    app.run(host='0.0.0.0', port=port, debug=True)
+    #app.run(port=8080)
